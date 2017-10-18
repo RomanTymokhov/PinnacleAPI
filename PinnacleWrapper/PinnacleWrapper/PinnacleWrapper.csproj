@@ -43,15 +43,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Bet.cs" />
+    <Compile Include="Data\BetAmount.cs" />
+    <Compile Include="Data\ClientBalance.cs" />
+    <Compile Include="Data\CurrenciesResponse.cs" />
+    <Compile Include="Data\Currency.cs" />
+    <Compile Include="Data\Event.cs" />
+    <Compile Include="Data\Feed.cs" />
+    <Compile Include="Data\FeedResponse.cs" />
+    <Compile Include="Data\FeedSport.cs" />
+    <Compile Include="Data\GetBetsResponse.cs" />
+    <Compile Include="Data\GetFixturesRequest.cs" />
+    <Compile Include="Data\GetFixturesResponse.cs" />
+    <Compile Include="Data\GetInRunningResponse.cs" />
+    <Compile Include="Data\GetLineResponse.cs" />
+    <Compile Include="Data\GetOddsEvent.cs" />
+    <Compile Include="Data\GetOddsLeague.cs" />
+    <Compile Include="Data\GetOddsRequest.cs" />
+    <Compile Include="Data\GetOddsResponse.cs" />
+    <Compile Include="Data\League.cs" />
+    <Compile Include="Data\LeaguesResponse.cs" />
+    <Compile Include="Data\MoneyLine.cs" />
+    <Compile Include="Data\MoneyLineType.cs" />
+    <Compile Include="Data\Period.cs" />
+    <Compile Include="Data\PeriodType.cs" />
+    <Compile Include="Data\PlaceBetRequest.cs" />
+    <Compile Include="Data\PlaceBetResponse.cs" />
+    <Compile Include="Data\ResponseError.cs" />
+    <Compile Include="Data\Sport.cs" />
+    <Compile Include="Data\SportsResponse.cs" />
+    <Compile Include="Data\Spread.cs" />
+    <Compile Include="Data\SpreadType.cs" />
+    <Compile Include="Data\Team.cs" />
+    <Compile Include="Data\TeamTotalPoints.cs" />
+    <Compile Include="Data\TeamTotalPointsType.cs" />
+    <Compile Include="Data\TotalPoints.cs" />
+    <Compile Include="Data\TotalPointsType.cs" />
+    <Compile Include="Enums\BetListType.cs" />
+    <Compile Include="Enums\BetStatus.cs" />
+    <Compile Include="Enums\BetType.cs" />
+    <Compile Include="Enums\EventStatus.cs" />
+    <Compile Include="Enums\GetLineResponseStatus.cs" />
+    <Compile Include="Enums\InRunningState.cs" />
+    <Compile Include="Enums\LiveStatus.cs" />
+    <Compile Include="Enums\OddsFormat.cs" />
+    <Compile Include="Enums\ParlayRestriction.cs" />
+    <Compile Include="Enums\PlaceBetErrorCode.cs" />
+    <Compile Include="Enums\PlaceBetResponseStatus.cs" />
+    <Compile Include="Enums\SideType.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Enums\TeamType.cs" />
+    <Compile Include="Enums\WinRiskType.cs" />
     <Compile Include="PinnacleClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
