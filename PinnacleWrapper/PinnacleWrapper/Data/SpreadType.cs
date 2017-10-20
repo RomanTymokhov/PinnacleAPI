@@ -7,7 +7,7 @@ namespace PinnacleWrapper.Data
         [JsonProperty(PropertyName = "altLineId")]
         public int AltLineId { get; set; }
 
-        [JsonProperty(PropertyName = "hdp")]
+        [JsonProperty(PropertyName = "hHdp")]
         public decimal HomeHandicap { get; set; }
 
         [JsonProperty(PropertyName = "away")]

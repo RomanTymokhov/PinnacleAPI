@@ -1,16 +1,13 @@
-﻿using System;
-//using System.Xml.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace PinnacleWrapper.Data
 {
-    [Serializable]
-    //[XmlRoot("teamTotals")]
     public class TeamTotalPoints
     {
-        //[XmlElement("homeTeamTotal")]
-        //private TotalPoints HomeTeamTotal;
+        [JsonProperty(PropertyName = "homeTeamTotal")]
+        private TotalPoints HomeTeamTotal;
 
-        //[XmlElement("awayTeamTotal")]
-        //private TotalPoints AwayTeamTotal;
+        [JsonProperty(PropertyName = "awayTeamTotal")]
+        private TotalPoints AwayTeamTotal;
     }
 }

@@ -1,74 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Xml.Serialization;
+using Newtonsoft.Json;
 using PinnacleWrapper.Enums;
 
 namespace PinnacleWrapper.Data
 {
-    //[Serializable]
-    //[XmlRoot("event")]
-    //public class Event
-    //{
-    //    [XmlElement("startDateTime")]
-    //    public DateTime StartDateTime { get; set; }
+    public class Event
+    {
+        [JsonProperty(PropertyName = "startDateTime")]
+        public DateTime StartDateTime { get; set; }
 
-    //    [XmlElement("id")]
-    //    public long Id { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public long Id { get; set; }
 
-    //    [XmlElement("IsLive")]
-    //    public string IsLiveString { get; set; }
+        [JsonProperty(PropertyName = "isLive")]
+        public string IsLiveString { get; set; }
+        
+        public bool isLive
+        {
+            get
+            {
+                return IsLiveString.Equals("Yes", StringComparison.OrdinalIgnoreCase);
+            }
 
-    //    [XmlIgnore]
-    //    public bool IsLive
-    //    {
-    //        get
-    //        {
-    //            return IsLiveString.Equals("Yes", StringComparison.OrdinalIgnoreCase);
-    //        }
+            set
+            {
+                IsLiveString = (value ? "Yes" : "No");
+            }
+        }
 
-    //        set
-    //        {
-    //            IsLiveString = (value ? "Yes" : "No");
-    //        }
-    //    }
+        [JsonProperty(PropertyName = "status")]
+        public string StatusString { get; set; }
+        
+        public Status status
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(StatusString))
+                {
+                    switch (StatusString.ToLower())
+                    {
+                        case "o":
+                            return Status.Open;
+                        case "i":
+                            return Status.LowerMaximum;
+                        case "h":
+                            return Status.Unavailable;
+                        case "x":
+                            return Status.Cancelled;
+                        default:
+                            throw new Exception("Unrecognized status: " + StatusString);
+                    }
+                }
 
-    //    [XmlElement("status")]
-    //    public string StatusString { get; set; }
+                throw new Exception("No status string");
+            }
+        }
 
-    //    [XmlIgnore]
-    //    public Status Status
-    //    {
-    //        get
-    //        {
-    //            if (!string.IsNullOrWhiteSpace(StatusString))
-    //            {
-    //                switch (StatusString.ToLower())
-    //                {
-    //                    case "o":
-    //                        return Status.Open;
-    //                    case "i":
-    //                        return Status.LowerMaximum;
-    //                    case "h":
-    //                        return Status.Unavailable;
-    //                    case "x":
-    //                        return Status.Cancelled;
-    //                    default:
-    //                        throw new Exception("Unrecognized status: " + StatusString);
-    //                }
-    //            }
+        [JsonProperty(PropertyName = "homeTeam")]
+        public Team HomeTeam { get; set; }
 
-    //            throw new Exception("No status string");
-    //        }
-    //    }
+        [JsonProperty(PropertyName = "awayTeam")]
+        public Team AwayTeam { get; set; }
 
-    //    [XmlElement("homeTeam")]
-    //    public Team HomeTeam { get; set; }
-
-    //    [XmlElement("awayTeam")]
-    //    public Team AwayTeam { get; set; }
-
-    //    [XmlArray("periods")]
-    //    [XmlArrayItem("period")]
-    //    public List<Period> Periods { get; set; }
-    //}
+        [JsonProperty(PropertyName = "periods")]
+        public List<Period> Periods { get; set; }
+    }
 }

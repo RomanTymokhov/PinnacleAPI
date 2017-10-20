@@ -1,15 +1,14 @@
 ﻿using System;
-//using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace PinnacleWrapper.Data
 {
-    [Serializable]
     public class BetAmount
     {
-        //[XmlElement("spread")]
-        //public double Spread { get; set; }
+        [JsonProperty(PropertyName = "spread")]
+        public double Spread { get; set; }
 
-        //[XmlElement("moneyLine")]
-        //public double MoneyLine { get; set; }
+        [JsonProperty(PropertyName = "moneyLine")]
+        public double MoneyLine { get; set; }
     }
 }

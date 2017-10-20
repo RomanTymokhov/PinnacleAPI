@@ -1,22 +1,20 @@
 ﻿using System;
-//using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace PinnacleWrapper.Data
 {
-    //[Serializable]
-    //[XmlRoot("teamTotal")]
-    //public class TotalPoints
-    //{
-    //    [XmlElement("@altLineId")]
-    //    public int? AltLineId;
+    public class TotalPoints
+    {
+        [JsonProperty(PropertyName = "@altLineId")]
+        public int? AltLineId;
 
-    //    [XmlElement("points")]
-    //    public decimal Points;
+        [JsonProperty(PropertyName = "points")]
+        public decimal Points;
 
-    //    [XmlElement("overPrice")]
-    //    public decimal OverPrice;
+        [JsonProperty(PropertyName = "overPrice")]
+        public decimal OverPrice;
 
-    //    [XmlElement("underPrice")]
-    //    public decimal UnderPrice;
-    //}
+        [JsonProperty(PropertyName = "underPrice")]
+        public decimal UnderPrice;
+    }
 }

@@ -1,19 +1,17 @@
 ﻿using System;
-//using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace PinnacleWrapper.Data
 {
-    //[Serializable]
-    //[XmlRoot("moneyLine")]
-    //public class MoneyLine
-    //{
-    //    [XmlElement("awayPrice")]
-    //    public double AwayPrice { get; set; }
+    public class MoneyLine
+    {
+        [JsonProperty(PropertyName = "awayPrice")]
+        public double AwayPrice { get; set; }
 
-    //    [XmlElement("homePrice")]
-    //    public double HomePrice { get; set; }
+        [JsonProperty(PropertyName = "homePrice")]
+        public double HomePrice { get; set; }
 
-    //    [XmlElement("drawPrice")]
-    //    public double DrawPrice { get; set; }
-    //}
+        [JsonProperty(PropertyName = "drawPrice")]
+        public double DrawPrice { get; set; }
+    }
 }

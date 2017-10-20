@@ -1,18 +1,17 @@
-﻿using System;
-//using System.Xml.Serialization;
+﻿using Newtonsoft.Json;
+
 
 namespace PinnacleWrapper.Data
 {
-    //[Serializable]
-    //public class Team
-    //{
-    //    [XmlAttribute("type")]
-    //    public string Type { get; set; }
+    public class Team
+    {
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
 
-    //    [XmlElement("name")]
-    //    public string Name { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
 
-    //    [XmlElement("rotNum")]
-    //    public int RotNum { get; set; }
-    //}
+        [JsonProperty(PropertyName = "rotNum")]
+        public int RotNum { get; set; }
+    }
 }

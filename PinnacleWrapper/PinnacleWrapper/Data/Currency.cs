@@ -11,6 +11,6 @@ namespace PinnacleWrapper.Data
         public string Name;
 
         [JsonProperty(PropertyName = "rate")]
-        public decimal rate;
+        public decimal Rate;
     }
 }

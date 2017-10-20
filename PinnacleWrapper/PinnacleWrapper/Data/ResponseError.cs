@@ -1,16 +1,13 @@
-﻿using System;
-//using System.Xml.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace PinnacleWrapper.Data
 {
-    //[Serializable]
-    //[XmlRoot("err")]
-    //public class ResponseError
-    //{
-    //    [XmlAttribute("code")]
-    //    public int Code { get; set; }
+    public class ResponseError
+    {
+        [JsonProperty("code")]
+        public int Code { get; set; }
 
-    //    [XmlText]
-    //    public string Message { get; set; }
-    //}
+        [JsonProperty("message")]
+        public string Message { get; set; }
+    }
 }

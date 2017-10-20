@@ -49,9 +49,6 @@
     <Compile Include="Data\CurrenciesResponse.cs" />
     <Compile Include="Data\Currency.cs" />
     <Compile Include="Data\Event.cs" />
-    <Compile Include="Data\Feed.cs" />
-    <Compile Include="Data\FeedResponse.cs" />
-    <Compile Include="Data\FeedSport.cs" />
     <Compile Include="Data\GetBetsResponse.cs" />
     <Compile Include="Data\GetFixturesRequest.cs" />
     <Compile Include="Data\GetFixturesResponse.cs" />

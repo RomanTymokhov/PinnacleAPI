@@ -54,7 +54,7 @@ namespace PinnacleWrapper.Data
         [JsonProperty(PropertyName = "oddsFormat")]
         public OddsFormat OddsFormat;
 
-        [JsonProperty(PropertyName = "customerCommission")]
+        [JsonProperty(PropertyName = "clientCommission")]
         public decimal? ClientCommission;
 
         [JsonProperty(PropertyName = "pitcher1")]

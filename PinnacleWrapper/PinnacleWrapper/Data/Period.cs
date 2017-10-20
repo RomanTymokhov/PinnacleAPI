@@ -1,40 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace PinnacleWrapper.Data
 {
-    //[Serializable]
-    //[XmlRoot("period")]
-    //public class Period
-    //{
-    //    [XmlAttribute("lineId")]
-    //    public long LineId { get; set; }
+    public class Period
+    {
+        [JsonProperty(PropertyName = "lineId")]
+        public long LineId { get; set; }
 
-    //    [XmlElement("number")]
-    //    public int Number { get; set; }
+        [JsonProperty(PropertyName = "number")]
+        public int Number { get; set; }
 
-    //    [XmlElement("description")]
-    //    public string Description { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
 
-    //    [XmlElement("cutoffDateTime")]
-    //    public DateTime CutoffDateTime { get; set; }
+        [JsonProperty(PropertyName = "cutoffDateTime")]
+        public DateTime CutoffDateTime { get; set; }
 
-    //    [XmlArray("spreads")]
-    //    [XmlArrayItem("spread")]
-    //    public List<Spread> Spreads { get; set; }
+        [JsonProperty(PropertyName = "spreads")]
+        public List<Spread> Spreads { get; set; }
 
-    //    [XmlElement("moneyLine")]
-    //    public MoneyLine MoneyLine { get; set; }
+        [JsonProperty(PropertyName = "moneyLine")]
+        public MoneyLine MoneyLine { get; set; }
 
-    //    [XmlArray("totals")]
-    //    [XmlArrayItem("total")]
-    //    public List<TotalPoints> Totals { get; set; }
+        [JsonProperty(PropertyName = "totals")]
+        public List<TotalPoints> Totals { get; set; }
 
-    //    //[XmlElement("teamTotals")]
-    //    //public TeamTotalPoints TeamTotalPoints { get; set; }      // temporarily unused
+        //[JsonProperty(PropertyName = "teamTotals")]
+        //public TeamTotalPoints TeamTotalPoints { get; set; }      // temporarily unused
 
-    //    [XmlElement("maxBetAmount")]
-    //    public BetAmount MaxBetAmount { get; set; }
-    //}
+        [JsonProperty(PropertyName = "maxBetAmount")]
+        public BetAmount MaxBetAmount { get; set; }
+    }
 }
